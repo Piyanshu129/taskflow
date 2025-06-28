@@ -1,0 +1,258 @@
+/* Enhanced TaskFlow Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.container, main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  color: #0D8ABC;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #0D8ABC;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0b7aa1;
+}
+
+#error, .error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+header {
+  background: #0D8ABC;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+header button {
+  margin-left: auto;
+  background-color: white;
+  color: #0D8ABC;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #f0f0f0;
+}
+
+#task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#task-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#task-input button {
+  background-color: #0D8ABC;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#task-input button:hover {
+  background-color: #0b7aa1;
+}
+
+.task-stage {
+  margin-bottom: 30px;
+}
+
+.task-card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 6px solid #0D8ABC;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+
+.task-card small {
+  display: block;
+  color: #555;
+  margin-top: 5px;
+}
+
+.actions button {
+  margin-right: 5px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 600px) {
+  header, .task-card, #task-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header h2, header button {
+    margin: 10px 0;
+  }
+}
+.task-card[data-priority="urgent"] {
+  border-left-color: red;
+}
+.task-card[data-priority="important"] {
+  border-left-color: orange;
+}
+.task-card[data-priority="normal"] {
+  border-left-color: #0D8ABC;
+}
+.header-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header-controls .button {
+  background-color: white;
+  color: #0D8ABC;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #0D8ABC;
+}
+.header-controls .button:hover {
+  background-color: #f0f0f0;
+}
+#top-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+#top-controls input[type="text"],
+#top-controls select,
+#top-controls button {
+  font-size: 16px;
+}
+
+#task-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#task-input input,
+#task-input select {
+  flex: 1;
+  min-width: 150px;
+}
+
+#task-input button {
+  padding: 10px 16px;
+  background-color: #0D8ABC;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#task-input button:hover {
+  background-color: #0b7aa1;
+}
+
+#data-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#data-controls .button,
+#data-controls button {
+  padding: 10px 16px;
+  background-color: white;
+  color: #0D8ABC;
+  border: 1px solid #0D8ABC;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#data-controls .button:hover,
+#data-controls button:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 600px) {
+  #task-input, #data-controls {
+    flex-direction: column;
+  }
+}
+.task-card[data-priority="urgent"] {
+  border-left-color: red;
+}
+.task-card[data-priority="important"] {
+  border-left-color: orange;
+}
+.task-card[data-priority="normal"] {
+  border-left-color: #0D8ABC;
+}
+.task-card small:nth-child(2) {
+  font-weight: bold;
+  color: #d9534f;
+}

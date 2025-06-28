@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Manage Your Tasks</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <img id="avatar" />
+    <h2 id="username"></h2>
+    <button id="signout">Sign Out</button>
+  </header>
+
+  <main>
+    <section id="top-controls">
+      <input type="text" id="search" placeholder="Search tasks..." />
+      
+      <div id="task-input">
+        <input type="text" id="task-input-field" placeholder="Add a task..." />
+        <select id="task-priority">
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="urgent">Urgent</option>
+        </select>
+        <button id="add-task">Add</button>
+      </div>
+      
+    </section>
+    
+
+    <section class="task-stage" id="todo-stage">
+      <h3>Todo (<span id="todo-count">0</span>)</h3>
+      <div class="task-list" id="todo-list"></div>
+    </section>
+
+    <section class="task-stage" id="completed-stage">
+      <h3>Completed (<span id="completed-count">0</span>)</h3>
+      <div class="task-list" id="completed-list"></div>
+    </section>
+
+    <section class="task-stage" id="archived-stage">
+      <h3>Archived (<span id="archived-count">0</span>)</h3>
+      <div class="task-list" id="archived-list"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
