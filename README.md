@@ -24,11 +24,7 @@ TaskFlow is a responsive and interactive task management web app that helps user
 
 ---
 
-## 📸 Screenshots
 
-![TaskFlow Screenshot](https://user-images.githubusercontent.com/00000000/taskflow-screenshot.png) <!-- (Optional: add your own hosted screenshot) -->
-
----
 
 ## 🛠️ Tech Stack
 
